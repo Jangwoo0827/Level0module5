@@ -14,3 +14,10 @@ if __name__ == '__main__':
     #   4. Draw the appropriate shape depending on their answer (call the right
     #      function)
     pass
+
+
+import turtle
+q = turtle
+q.speed(10)
+
+def square()
