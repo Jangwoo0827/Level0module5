@@ -3,8 +3,9 @@ Have the turtle draw a row of houses.
 """
 from tkinter import messagebox, simpledialog, Tk
 
-
 if __name__ == '__main__':
+    Window = Tk()
+    Window.withdraw()
     # TODO)
     #   1) Move the turtle to the left side of the window near the bottom.
     #   2) Draw ONE flat-topped house with height=100 and green grass after it.
@@ -26,3 +27,38 @@ if __name__ == '__main__':
     #   11) By calling the correct "roof" function, make large houses have
     #      flat roofs and all the others have pointy roofs.
     pass
+import turtle
+
+q = turtle
+q.speed(3)
+q.bgcolor("green")
+
+
+def draw_house():
+    size = simpledialog.askinteger(title="", prompt="Select.(small, medium, large)")
+    if size == "small":
+        size = 60
+        q.forward(size / 2)
+        q.left(90)
+        q.forward(size)
+        q.left(90)
+        q.forward(size)
+        q.left(90)
+        q.forward(size)
+        q.left(90)
+        q.forward(size / 2)
+    if size == "medium":
+        size = 120
+        q.forward(size / 2)
+        q.left(90)
+        q.forward(size)
+        q.left(90)
+        q.forward(size)
+        q.left(90)
+        q.forward(size)
+        q.left(90)
+        q.forward(size / 2)
+
+
+for i in range(10):
+    draw_house()
