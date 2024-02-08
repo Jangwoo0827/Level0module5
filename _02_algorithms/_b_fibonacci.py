@@ -19,3 +19,14 @@ if __name__ == '__main__':
     #  4. Now try to figure out how to change the variables before the for
     #     loop repeats so the sequence of numbers is correct.
     pass
+
+num1 = 0
+num2 = 1
+s = None
+
+for i in range(1581):
+    print(num1)
+    print(num2)
+    s = num1 + num2
+    num1 = s
+    num2 = num1 + num2
