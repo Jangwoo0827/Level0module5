@@ -3,6 +3,8 @@ Write an algorithm to change a string into a "goofy" version.
 """
 from tkinter import messagebox, simpledialog, Tk
 
+Window = Tk()
+Tk().withdraw()
 
 if __name__ == '__main__':
     # TODO)
@@ -15,3 +17,12 @@ if __name__ == '__main__':
     #  3. Show the user the goofy version of their name in a pop-up.
     pass
 
+n = simpledialog.askstring(title="", prompt="Enter your name(First name and last name).")
+gn = ''
+for i in range(len(n)):
+    if i % 2 == 1:
+        gn = gn + n[i].lower()
+    else:
+        gn = gn + n[i].upper()
+messagebox.showinfo(title=None, message=gn)
+pass
